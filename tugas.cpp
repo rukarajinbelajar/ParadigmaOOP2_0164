@@ -71,16 +71,17 @@ class RekeningPremium : public RekeningBank {
 
 int main(){
   RekeningSyariah rs;
-  rs.setRekening("Ahmad", 5000000);
+  cout << fixed << setprecision(0);
+  rs.setRekening("Sono", 5000000);
 
   RekeningKonvensional rk;
-  rk.setRekening("Budi", 2000000);
+  rk.setRekening("Nur", 2000000);
 
   RekeningPremium rp1;
-  rp1.setRekening("Citra", 15000000);
+  rp1.setRekening("Yono", 15000000);
 
   RekeningPremium rp2;
-  rp2.setRekening("Dani", 8000000);
+  rp2.setRekening("Helmi", 8000000);
 
   cout << "=== Proses Akhir Bulan - Bank Gibran Jaya ===" << endl;
   cout << "----------------------------" << endl;
