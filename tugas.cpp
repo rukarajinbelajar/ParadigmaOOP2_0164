@@ -43,3 +43,27 @@ public:
         cout << "Saldo  : Rp " << saldo << endl;
     }
 };
+
+class RekeningPremium : public RekeningBank {
+  private:
+    string nama;
+    double saldo;
+
+  public:
+    void setRekening(string n, double s){
+      nama = n;
+      saldo = s;
+    }
+    void potongAdmin() override {
+      cout << "Nama     : " << nama << endl;
+      cout << "Tipe     : Premium" << endl;
+      if(saldo > 10000000){
+        cout << "Admin    : Bebas biaya admin" << endl;
+      } else {
+        saldo -= 50000;
+        cout << "Admin    : Rp 50.000 dipotong" << endl;
+      }
+      cout << "Saldo    : Rp " << saldo << endl;
+      cout << "----------------------------" << endl;
+    }
+};
