@@ -26,7 +26,7 @@ public:
     }
 };
 
-class rekeningKonvensial : public RekeningBank {
+class RekeningKonvensional : public RekeningBank {
 private:
     string nama;
     double saldo;
@@ -67,3 +67,27 @@ class RekeningPremium : public RekeningBank {
       cout << "----------------------------" << endl;
     }
 };
+
+int main(){
+  RekeningSyariah rs;
+  rs.setRekening("Ahmad", 5000000);
+
+  RekeningKonvensional rk;
+  rk.setRekening("Budi", 2000000);
+
+  RekeningPremium rp1;
+  rp1.setRekening("Citra", 15000000);
+
+  RekeningPremium rp2;
+  rp2.setRekening("Dani", 8000000);
+
+  cout << "=== Proses Akhir Bulan - Bank Gibran Jaya ===" << endl;
+  cout << "----------------------------" << endl;
+
+  rs.potongAdmin();
+  rk.potongAdmin();
+  rp1.potongAdmin();
+  rp2.potongAdmin();
+
+  return 0;
+}
